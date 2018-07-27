@@ -34,10 +34,26 @@ public class YaraTechJavaTest {
 			System.out.println("Enter Your SabegheKar");
 			sabeghe = input.nextInt();
 			System.out.println("Enter Your LastJob");
-			String lastJob = input.nextLine();
+			String lastJob = input.next();
 			System.out.println("Enter Your Language");
 			String lang = input.next();
 			WebDeveloper web = new WebDeveloper(firstName, lastName, id, sabeghe, lastJob, lang);
+			break;
+
+		case ("mobileDev"):
+			System.out.println("Enter Your FirstName");
+			firstName = input.nextLine();
+			System.out.println("Enter Your LastName");
+			lastName = input.nextLine();
+			System.out.println("Enter Your NationalId");
+			id = input.nextInt();
+			System.out.println("Enter Your SabegheKar");
+			sabeghe = input.nextInt();
+			System.out.println("Enter Your LastJob");
+			String lastjob = input.next();
+			System.out.println("Enter Your NumberOfPublishedApp");
+			int number = input.nextInt();
+			MobileDeveloper mobile = new MobileDeveloper(firstName, lastName, id, sabeghe, lastjob, number);
 			break;
 
 		}
