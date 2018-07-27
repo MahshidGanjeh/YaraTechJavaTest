@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class MobileDeveloper extends Developer {
 
-	private static final String MobileDeveloperDirectoryPath = "D:\\Programming\\Java\\YaraTechJavaTest\\Mobile.txt";
+	private static final String MobileDeveloperDirectoryPath = "Mobile.txt";
 
 	private int numberOfPublishedApps;
 

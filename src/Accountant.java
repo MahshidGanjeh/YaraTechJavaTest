@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Accountant extends Employee {
 
-	private static final String AccountantDirectoryPath = "D:\\Programming\\Java\\YaraTechJavaTest\\Acc.txt";
+	private static final String AccountantDirectoryPath = "Acc.txt";
 	private String lastDegree;
 
 	public Accountant() {

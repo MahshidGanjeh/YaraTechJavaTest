@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class WebDeveloper extends Developer {
 
 	private String programmingLanguage;
-	private static final String WebDeveloperDirectoryPath = "D:\\Programming\\Java\\YaraTechJavaTest\\Web.txt";
+	private static final String WebDeveloperDirectoryPath = "Web.txt";
 	
 	public WebDeveloper(){
 		

@@ -39,7 +39,8 @@ public class YaraTechJavaTest {
 			String lastJob = input.next();
 			System.out.println("Enter Your Programming Language");
 			String lang = input.next();
-			new WebDeveloper(firstName, lastName, id, NumberOfYearsOfExperience, lastJob, lang).writeWebDeveloperInfoToFile();
+			new WebDeveloper(firstName, lastName, id, NumberOfYearsOfExperience, lastJob, lang)
+					.writeWebDeveloperInfoToFile();
 			break;
 
 		case ("MobileDeveloper"):
@@ -55,11 +56,21 @@ public class YaraTechJavaTest {
 			String lastjob = input.next();
 			System.out.println("Enter Your NumberOfPublishedApp");
 			int number = input.nextInt();
-			new MobileDeveloper(firstName, lastName, id, NumberOfYearsOfExperience, lastjob, number).writeMobileDeveloperInfoToFile();
+			new MobileDeveloper(firstName, lastName, id, NumberOfYearsOfExperience, lastjob, number)
+					.writeMobileDeveloperInfoToFile();
 			break;
 		}
-		
+	}
+
+	public void readListOfMobileDevelopers() {
 		new MobileDeveloper().readMobileDeveloperInfoFromFile();
-		
+	}
+
+	public void readListOfWebDevelopers() {
+		new WebDeveloper().readWebDeveloperInfoFromFile();
+	}
+
+	public void readListOfAccountants() {
+		new Accountant().readAccountantInfoFromFile();
 	}
 }
