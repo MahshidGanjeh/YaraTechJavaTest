@@ -4,6 +4,9 @@ public class Employee {
 	private String lastName;
 	private Long nationalId;
 	private int numberOfYearsOfExperience;
+	
+	public Employee() {
+	}
 
 	public Employee(String fName, String lName, Long id, int s) {
 		firstName = fName;
