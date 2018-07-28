@@ -6,13 +6,16 @@ public class YaraTechJavaTest {
 	public static void main(String[] args) {
 		Run();
 	}
-	
-	public static void Run(){
+
+	public static void Run() {
 		String firstName, lastName;
 		Long id;
 		int NumberOfYearsOfExperience;
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter 1 for Accountant, 2 WebDeveloper or 3 MobileDeveloper to continue");
+		System.out.println("Enter 1 for Accountant, 2 for WebDeveloper 3 for MobileDeveloper " + System.lineSeparator()
+				+ "to Save Info Of New Employee" + System.lineSeparator() + "4 to see the list of Accountants "
+				+ "5 to see the list of mobileDevelopers" + System.lineSeparator()
+				+ "6 to see the list of webDevelopers");
 
 		switch (input.nextInt()) {
 		case (1):
@@ -65,18 +68,27 @@ public class YaraTechJavaTest {
 					.writeMobileDeveloperInfoToFile();
 			Run();
 			break;
+		case (4):
+			readListOfAccountants();
+			Run();
+		case (5):
+			readListOfMobileDevelopers();
+			Run();
+		case (6):
+			readListOfWebDevelopers();
+			Run();
 		}
 	}
 
-	public void readListOfMobileDevelopers() {
+	public static void readListOfMobileDevelopers() {
 		new MobileDeveloper().readMobileDeveloperInfoFromFile();
 	}
 
-	public void readListOfWebDevelopers() {
+	public static void readListOfWebDevelopers() {
 		new WebDeveloper().readWebDeveloperInfoFromFile();
 	}
 
-	public void readListOfAccountants() {
+	public static void readListOfAccountants() {
 		new Accountant().readAccountantInfoFromFile();
 	}
 }
