@@ -11,16 +11,17 @@ public class YaraTechJavaTest {
 		String firstName, lastName;
 		Long id;
 		int NumberOfYearsOfExperience;
+		Scanner input1 = new Scanner(System.in);
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter 1 for Accountant, 2 for WebDeveloper 3 for MobileDeveloper " + System.lineSeparator()
 				+ "to Save Info Of New Employee" + System.lineSeparator() + "4 to see the list of Accountants "
 				+ "5 to see the list of mobileDevelopers" + System.lineSeparator()
 				+ "6 to see the list of webDevelopers");
 
-		switch (input.nextInt()) {
+		switch (input1.nextInt()) {
 		case (1):
 			System.out.println("Enter Your FirstName");
-			firstName = input.next();
+			firstName = input.nextLine();
 			System.out.println("Enter Your LastName");
 			lastName = input.nextLine();
 			System.out.println("Enter Your NationalId");
