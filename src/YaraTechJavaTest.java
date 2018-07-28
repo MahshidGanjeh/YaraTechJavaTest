@@ -4,17 +4,20 @@ import java.util.Scanner;
 public class YaraTechJavaTest {
 
 	public static void main(String[] args) {
-
+		Run();
+	}
+	
+	public static void Run(){
 		String firstName, lastName;
 		Long id;
 		int NumberOfYearsOfExperience;
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter Accountant, WebDeveloper or MobileDeveloper to continue");
+		System.out.println("Enter 1 for Accountant, 2 WebDeveloper or 3 MobileDeveloper to continue");
 
-		switch (input.nextLine()) {
-		case ("Accountant"):
+		switch (input.nextInt()) {
+		case (1):
 			System.out.println("Enter Your FirstName");
-			firstName = input.nextLine();
+			firstName = input.next();
 			System.out.println("Enter Your LastName");
 			lastName = input.nextLine();
 			System.out.println("Enter Your NationalId");
@@ -24,11 +27,12 @@ public class YaraTechJavaTest {
 			System.out.println("Enter Your LastDegree");
 			String lastDegree = input.next();
 			new Accountant(firstName, lastName, id, NumberOfYearsOfExperience, lastDegree).writeAccountantInfoToFile();
+			Run();
 			break;
 
-		case ("WebDeveloper"):
+		case (2):
 			System.out.println("Enter Your FirstName");
-			firstName = input.nextLine();
+			firstName = input.next();
 			System.out.println("Enter Your LastName");
 			lastName = input.nextLine();
 			System.out.println("Enter Your NationalId");
@@ -41,11 +45,12 @@ public class YaraTechJavaTest {
 			String lang = input.next();
 			new WebDeveloper(firstName, lastName, id, NumberOfYearsOfExperience, lastJob, lang)
 					.writeWebDeveloperInfoToFile();
+			Run();
 			break;
 
-		case ("MobileDeveloper"):
+		case (3):
 			System.out.println("Enter Your FirstName");
-			firstName = input.nextLine();
+			firstName = input.next();
 			System.out.println("Enter Your LastName");
 			lastName = input.nextLine();
 			System.out.println("Enter Your NationalId");
@@ -58,6 +63,7 @@ public class YaraTechJavaTest {
 			int number = input.nextInt();
 			new MobileDeveloper(firstName, lastName, id, NumberOfYearsOfExperience, lastjob, number)
 					.writeMobileDeveloperInfoToFile();
+			Run();
 			break;
 		}
 	}
